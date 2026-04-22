@@ -18,19 +18,16 @@ def emoji_bar(value, emoji, max_value=10):
     return emoji * v + "▫️" * (max_value - v) + f" ({v}/{max_value})"
 
 def draw_weighted_card(cards, round_number, total_rounds):
-    # FIX 1: Robust no-repeat logic — always read directly from session state
     if "used_card_titles" not in st.session_state:
         st.session_state.used_card_titles = []
 
     used = set(st.session_state.used_card_titles)
     available = [c for c in cards if c["title"] not in used]
 
-    # If all cards exhausted, reset the deck
     if not available:
         st.session_state.used_card_titles = []
         available = list(cards)
 
-    # FIX 2: Slightly heavier negative weights
     progress = round_number / max(1, total_rounds)
 
     if progress < 0.3:
@@ -38,19 +35,13 @@ def draw_weighted_card(cards, round_number, total_rounds):
     else:
         weights = {"positive": 0.20, "neutral": 0.20, "negative_type_1": 0.35, "negative_type_2": 0.25}
 
-    # Filter to types with available unused cards
     pool = [c for c in available if c["type"] in weights and weights[c["type"]] > 0]
-
-    # Fallback: if a type has run out and pool is empty, use all remaining cards
     if not pool:
         pool = available
 
     card_weights = [weights.get(c["type"], 0.1) for c in pool]
     chosen = random.choices(pool, weights=card_weights, k=1)[0]
-
-    # Mark as used — append directly to session state list
     st.session_state.used_card_titles.append(chosen["title"])
-
     return chosen
 
 
@@ -82,7 +73,6 @@ p.setdefault("ef_balance", 0)
 p.setdefault("wants_balance", 0)
 p.setdefault("allocation", {"savings": 0, "ef": 0, "wants": 0})
 
-# Initialise used card tracker
 if "used_card_titles" not in st.session_state:
     st.session_state.used_card_titles = []
 
@@ -197,6 +187,26 @@ with st.container(border=True):
         )
 
 # -------------------------------------------------
+# Allocation validation — runs every render cycle
+# -------------------------------------------------
+alloc_sum = (
+    p["allocation"]["savings"]
+    + p["allocation"]["ef"]
+    + p["allocation"]["wants"]
+)
+alloc_valid = alloc_sum == remaining
+
+if not alloc_valid:
+    diff = alloc_sum - remaining
+    direction = "over" if diff > 0 else "under"
+    st.error(
+        f"⚠️ Your monthly allocations add up to **{fmt(alloc_sum)}** "
+        f"but your remaining budget is **{fmt(remaining)}** — "
+        f"you are **{fmt(abs(diff))} {direction}**. "
+        f"Please adjust before continuing."
+    )
+
+# -------------------------------------------------
 # Game Logic
 # -------------------------------------------------
 def simulate_choice_and_validate(p, selected):
@@ -229,14 +239,11 @@ def simulate_choice_and_validate(p, selected):
     if new_time < 0:
         return False, "Not enough time/energy to take this action.", None
 
-    # FIX 4: Clamp wellbeing and time at 10 — never block a decision for exceeding max.
-    # Only the lower bound (0) is a hard stop.
     new_emotion = p["emotion"] + wellbeing_delta
     if new_emotion < 0:
         return False, "This decision would push your wellbeing too low.", None
-    new_emotion = min(10, new_emotion)   # silently cap at 10, no error
-
-    new_time = min(10, new_time)         # silently cap time at 10 too
+    new_emotion = min(10, new_emotion)
+    new_time = min(10, new_time)
 
     new_state = {
         "savings": new_savings,
@@ -286,10 +293,15 @@ with left:
                 success=False,
             )
 
-    draw_disabled = bool(p.get("current_card") or p["rounds_played"] >= tr)
-    draw = st.button("🎴 Draw Life Card", type="primary", disabled=draw_disabled)
+    # Draw button disabled if allocation is invalid OR a card is already active
+    draw_disabled = bool(p.get("current_card") or p["rounds_played"] >= tr or not alloc_valid)
+    draw = st.button(
+        "🎴 Draw Life Card",
+        type="primary",
+        disabled=draw_disabled,
+        help="Fix your budget allocation above before drawing." if not alloc_valid else None,
+    )
 
-    # FIX 3: Load both card files and merge into one deck
     if "life_cards" not in st.session_state:
         with open("data/life_cards.json", "r") as f:
             base_cards = json.load(f)
@@ -321,7 +333,14 @@ with left:
 
         choice = st.radio("Choose an option:", display_opts, key="decision_choice")
 
-        if st.button("💾 Save Decision", key="save_decision"):
+        # Save button also blocked if allocation is invalid
+        save_disabled = not alloc_valid
+        if st.button(
+            "💾 Save Decision",
+            key="save_decision",
+            disabled=save_disabled,
+            help="Fix your budget allocation above before saving." if save_disabled else None,
+        ):
             selected = options[display_opts.index(choice)]
 
             ok, msg, new_state = simulate_choice_and_validate(p, selected)
