@@ -1,0 +1,1697 @@
+[
+  {
+    "title": "Side Hustle Opportunity",
+    "description": "A contact asks if you'd like to sell handmade crafts at a local market.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Set up a full stall",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": 100,
+        "wellbeing": 1,
+        "time": -2
+      },
+      {
+        "label": "Sell a few items casually",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": 50,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Pass on the opportunity",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Tax Refund",
+    "description": "You receive a tax refund you weren't expecting.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Put it all into savings",
+        "savings_delta": 600,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Split between savings and fun",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": -300,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Treat yourself entirely",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -600,
+        "wellbeing": 2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Investment Pays Off",
+    "description": "A small stock you bought months ago has risen significantly in value.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Sell and pocket the profit",
+        "savings_delta": 400,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Reinvest the gains",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Sell half, keep half",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Salary Raise",
+    "description": "Your annual review results in a pay raise.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Redirect full raise to savings",
+        "savings_delta": 400,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Upgrade your lifestyle a little",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Boost your emergency fund",
+        "savings_delta": 0,
+        "ef_delta": 400,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Sold Old Furniture",
+    "description": "You declutter and sell old furniture online.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Add earnings to savings",
+        "savings_delta": 250,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Buy something new for home",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -250,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Donate proceeds to charity",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Won a Raffle",
+    "description": "You win a local raffle and receive a cash prize.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Save the full prize",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Celebrate with family",
+        "savings_delta": 50,
+        "ef_delta": 0,
+        "wants_delta": -250,
+        "wellbeing": 3,
+        "time": -1
+      },
+      {
+        "label": "Add to emergency fund",
+        "savings_delta": 0,
+        "ef_delta": 300,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Referral Bonus",
+    "description": "A friend signs up to a service using your referral link and you get a bonus.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Put it straight into savings",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Split it with your friend",
+        "savings_delta": 75,
+        "ef_delta": 0,
+        "wants_delta": -75,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Treat yourself to a nice meal",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -150,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Job Promotion Offer",
+    "description": "You're offered a promotion with more pay but significantly more responsibility.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Accept the promotion",
+        "savings_delta": 500,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -2
+      },
+      {
+        "label": "Negotiate for better conditions",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Decline and stay comfortable",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Subscription Audit",
+    "description": "You review your monthly subscriptions and notice several you forgot about.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Cancel all unused ones",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Keep a couple you enjoy",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Keep everything as is",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Cashback Reward",
+    "description": "Your credit card rewards program pays out a cashback bonus.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Apply it to your balance",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Use it for groceries",
+        "savings_delta": 50,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Spend it on entertainment",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Weekend Road Trip",
+    "description": "Friends invite you on a spontaneous road trip this weekend.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Join and split all costs",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -150,
+        "wellbeing": 3,
+        "time": -1
+      },
+      {
+        "label": "Join but budget strictly",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Stay home and relax",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Gym Membership Deal",
+    "description": "A local gym is offering a discounted annual membership.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Buy the annual plan",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Try a monthly plan first",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Stick to free workouts",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "New Online Course",
+    "description": "You discover a highly-rated online course that could boost your career skills.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Enroll and invest in yourself",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -2
+      },
+      {
+        "label": "Find a free alternative",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Skip it for now",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Eating Out Habit",
+    "description": "You notice you've been ordering food delivery almost every night.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Start meal prepping",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Limit to weekends only",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Keep your current habit",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Concert Tickets on Sale",
+    "description": "Your favourite artist announces a concert in your city.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Buy premium seats",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": -250,
+        "wellbeing": 3,
+        "time": -1
+      },
+      {
+        "label": "Buy standard tickets",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -150,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Watch the livestream",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -20,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Coffee Shop Habit",
+    "description": "You realise you buy an expensive coffee every morning before work.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Make coffee at home",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Cut down to twice a week",
+        "savings_delta": 75,
+        "ef_delta": 0,
+        "wants_delta": -30,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Keep the daily ritual",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": -150,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Coworker's Charity Drive",
+    "description": "A coworker is running a charity fundraiser and asks for donations.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Give generously",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Make a small contribution",
+        "savings_delta": -30,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Politely decline",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Second-Hand Shopping",
+    "description": "You need new clothes for the season.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Shop at a thrift store",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Buy from a mid-range store",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Go luxury shopping",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": -400,
+        "wellbeing": 2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Moving Out Opportunity",
+    "description": "You have the chance to move closer to work, saving commute time but paying more rent.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Move to the new place",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 1
+      },
+      {
+        "label": "Stay put and commute",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      },
+      {
+        "label": "Find a compromise location",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Home Cooking Challenge",
+    "description": "A friend challenges you to cook every meal at home for a month.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Accept and go all-in",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Try it but allow one cheat day",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Decline the challenge",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Car Breaks Down",
+    "description": "Your car stops working on the way to work.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Pay for repairs using EF",
+        "savings_delta": 0,
+        "ef_delta": -400,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Pay from savings",
+        "savings_delta": -400,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Use public transport temporarily",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Laptop Stops Working",
+    "description": "Your laptop gives up just before an important deadline.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Buy a refurbished replacement",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Use EF for a new laptop",
+        "savings_delta": 0,
+        "ef_delta": -500,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Borrow a friend's laptop",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Parking Fine",
+    "description": "You receive an unexpected parking fine.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Pay it immediately",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Appeal the fine",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      },
+      {
+        "label": "Pay late (incur extra fees)",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Phone Screen Cracked",
+    "description": "You drop your phone and the screen shatters.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Repair at a local shop",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Use the emergency fund",
+        "savings_delta": 0,
+        "ef_delta": -150,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Live with the cracked screen",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Utility Bill Spike",
+    "description": "Your electricity bill this month is unexpectedly high.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Cut back on usage immediately",
+        "savings_delta": 50,
+        "ef_delta": -150,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Pay from savings, investigate cause",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Ignore it this month",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Bike Gets Stolen",
+    "description": "Your bicycle is stolen from outside work.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Buy a second-hand replacement",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Claim on insurance (EF for excess)",
+        "savings_delta": 0,
+        "ef_delta": -100,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Go without and walk",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Leaking Roof",
+    "description": "A storm causes a small leak in your flat's roof.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Contact landlord immediately",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Pay for temporary fix yourself",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Ignore it and hope for the best",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Overdue Dental Work",
+    "description": "You've been putting off a dental appointment, but the pain gets worse.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Go private for quick treatment",
+        "savings_delta": 0,
+        "ef_delta": -500,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Use savings for public clinic",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -2
+      },
+      {
+        "label": "Keep postponing treatment",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -3,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Major Car Repair",
+    "description": "Your mechanic says your engine needs serious work.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Fix it (use EF + savings)",
+        "savings_delta": -400,
+        "ef_delta": -600,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Sell the car and use public transport",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      },
+      {
+        "label": "Take out a small loan",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Job Loss",
+    "description": "Your company announces layoffs and your role is cut.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Live on EF while job hunting",
+        "savings_delta": 0,
+        "ef_delta": -800,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Take any available job immediately",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      },
+      {
+        "label": "Freelance while looking for permanent work",
+        "savings_delta": 100,
+        "ef_delta": -300,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      }
+    ]
+  },
+
+  {
+    "title": "Flood Damage at Home",
+    "description": "Heavy rains flood part of your home.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Claim on insurance",
+        "savings_delta": 0,
+        "ef_delta": -300,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -2
+      },
+      {
+        "label": "Pay for repairs from savings",
+        "savings_delta": -700,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Temporarily stay with family",
+        "savings_delta": -100,
+        "ef_delta": -200,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Legal Dispute",
+    "description": "A misunderstanding with a landlord leads to a small legal dispute.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Hire a lawyer",
+        "savings_delta": -500,
+        "ef_delta": -300,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -2
+      },
+      {
+        "label": "Seek free legal aid",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Settle out of court",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Identity Theft",
+    "description": "Someone steals your credit card details and makes fraudulent charges.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Report and dispute charges immediately",
+        "savings_delta": 0,
+        "ef_delta": -100,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Absorb the loss and move on",
+        "savings_delta": -400,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      },
+      {
+        "label": "Get credit monitoring service",
+        "savings_delta": -100,
+        "ef_delta": -100,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Colleague Asks to Borrow Money",
+    "description": "A work colleague asks for a personal loan to cover their bills.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Lend the full amount",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Lend a smaller amount",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Politely decline",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Travel Opportunity",
+    "description": "A great deal appears for a short international trip.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Book the trip fully",
+        "savings_delta": -400,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 3,
+        "time": -1
+      },
+      {
+        "label": "Do a cheaper local trip instead",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Stay home and save",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "New Baby in the Family",
+    "description": "A sibling has a baby and you want to contribute meaningfully.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Buy a generous gift",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Give a thoughtful but modest gift",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Offer your time instead of money",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Freelance Client Dispute",
+    "description": "A client refuses to pay you for completed freelance work.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Take legal action",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -2
+      },
+      {
+        "label": "Negotiate and settle for partial payment",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Write it off as a loss",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Home Insurance Renewal",
+    "description": "Your home insurance is up for renewal at a higher price.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Renew without shopping around",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Compare and switch providers",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Downgrade to basic coverage",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Gambling Temptation",
+    "description": "Friends invite you to a casino night, framed as a social event.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Go with a strict spending limit",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Go and get carried away",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": -2,
+        "time": -1
+      },
+      {
+        "label": "Decline and suggest something free instead",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Impulse Investment",
+    "description": "A friend urges you to invest in a trending cryptocurrency.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Invest a large amount",
+        "savings_delta": -500,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      },
+      {
+        "label": "Invest a small amount you can afford to lose",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Research first, invest cautiously later",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Unexpected Inheritance",
+    "description": "A distant relative leaves you a modest inheritance.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Invest it long-term",
+        "savings_delta": 1000,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Split between savings and emergency fund",
+        "savings_delta": 500,
+        "ef_delta": 500,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Take a meaningful trip in memory of them",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -1000,
+        "wellbeing": 3,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Pet Emergency",
+    "description": "Your pet needs urgent veterinary care after an accident.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Pay for full treatment (use EF)",
+        "savings_delta": 0,
+        "ef_delta": -600,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Choose essential treatment only",
+        "savings_delta": -200,
+        "ef_delta": -200,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Rely on a payment plan",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Professional Networking Event",
+    "description": "A paid industry networking dinner could open career doors.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Attend and make the most of it",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Attend but network online before to maximise value",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Skip it this time",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Community Volunteer Project",
+    "description": "Your neighbourhood is organising a weekend clean-up project.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Volunteer your time fully",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Donate money instead",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Skip this one",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Burnout Warning Signs",
+    "description": "You've been exhausted for weeks and a friend suggests taking a mental health day.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Take the day off and rest",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 1
+      },
+      {
+        "label": "Book a short wellness retreat",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 3,
+        "time": 0
+      },
+      {
+        "label": "Push through and keep working",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -3,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Bulk Buy Opportunity",
+    "description": "A wholesale store offers massive discounts if you buy in bulk.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Buy essentials in bulk",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Buy only what you need now",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Go overboard on non-essentials",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -400,
+        "wellbeing": 0,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Mentorship Offer",
+    "description": "A senior professional offers to mentor you in your field.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Accept enthusiastically",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Accept with limited commitment",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Decline due to time constraints",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Unexpected Price Hike at Supermarket",
+    "description": "Your usual grocery shop costs 30% more than last month due to inflation.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Switch to budget brands",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Absorb the cost, keep habits",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Meal plan more carefully",
+        "savings_delta": 50,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Friend Moving Away",
+    "description": "Your best friend is moving to another city and wants a going-away party.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Throw them a big sendoff",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Plan a small intimate dinner",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Skip the party, say bye privately",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Energy Bill Switch",
+    "description": "You discover a better energy tariff that could save you money.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Switch providers immediately",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Research more before committing",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Stick with your current provider",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Water Pipe Burst",
+    "description": "A pipe bursts in your bathroom causing minor flooding.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Hire a plumber urgently (use EF)",
+        "savings_delta": 0,
+        "ef_delta": -350,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Try a DIY fix first",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Report to landlord and wait",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Freelance Project Windfall",
+    "description": "A client loves your work and pays a large bonus on top of your agreed fee.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Save it all",
+        "savings_delta": 700,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Split between savings and self-reward",
+        "savings_delta": 400,
+        "ef_delta": 0,
+        "wants_delta": -300,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Invest in tools to grow your freelance work",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": -500,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Annual Leave Decision",
+    "description": "You have unused annual leave to use before year-end.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Take a week off to rest",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 3,
+        "time": 2
+      },
+      {
+        "label": "Use it for a short trip",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 3,
+        "time": 1
+      },
+      {
+        "label": "Cash out unused days if possible",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  }
+]
