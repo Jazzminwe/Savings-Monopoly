@@ -305,7 +305,7 @@ with left:
     if "life_cards" not in st.session_state:
         with open("data/life_cards.json", "r") as f:
             base_cards = json.load(f)
-        with open("data/life_cards_additional.json", "r") as f:
+        with open("data/life_cards.json", "r") as f:
             extra_cards = json.load(f)
         st.session_state.life_cards = base_cards + extra_cards
 
