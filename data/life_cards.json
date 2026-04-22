@@ -1693,5 +1693,965 @@
         "time": 0
       }
     ]
+  },
+  
+  {
+    "title": "Bank Loyalty Bonus",
+    "description": "Your bank rewards you for being a long-term customer with a cash bonus.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Add to savings",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Top up emergency fund",
+        "savings_delta": 0,
+        "ef_delta": 200,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Treat yourself",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Online Course Goes Viral",
+    "description": "A tutorial you posted online attracts thousands of views and generates passive income.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Reinvest in creating more content",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 2,
+        "time": -2
+      },
+      {
+        "label": "Save the earnings",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Ignore it and move on",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Gift from Family",
+    "description": "A relative sends you an unexpected cash gift for a personal milestone.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Put it all in savings",
+        "savings_delta": 400,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Split savings and a small treat",
+        "savings_delta": 250,
+        "ef_delta": 0,
+        "wants_delta": -150,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Use it entirely for something meaningful",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -400,
+        "wellbeing": 3,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Interest Payout",
+    "description": "Your savings account pays out a higher-than-expected annual interest.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Compound it back into savings",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Move it to emergency fund",
+        "savings_delta": 0,
+        "ef_delta": 150,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Spend it on a hobby",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -150,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Professional Certification",
+    "description": "You pass a professional exam and receive a pay uplift from your employer.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Direct the raise to savings",
+        "savings_delta": 350,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Celebrate and save half",
+        "savings_delta": 175,
+        "ef_delta": 0,
+        "wants_delta": -175,
+        "wellbeing": 3,
+        "time": -1
+      },
+      {
+        "label": "Take a short break as a reward",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -250,
+        "wellbeing": 3,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Car Insurance Refund",
+    "description": "Your insurer sends a partial refund after reassessing your risk profile.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Add to emergency fund",
+        "savings_delta": 0,
+        "ef_delta": 200,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Put into savings",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Use for a weekend outing",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 2,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Grant for Skills Training",
+    "description": "You receive a government grant to fund professional development.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Use the grant fully for training",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -2
+      },
+      {
+        "label": "Take part of the training, save the rest",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Skip the training and save the funds",
+        "savings_delta": 300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Secondment Opportunity",
+    "description": "Your company offers you a paid secondment to another department with a stipend.",
+    "type": "positive",
+    "options": [
+      {
+        "label": "Accept and save the stipend",
+        "savings_delta": 400,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Accept and enjoy the extra income",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": -200,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Decline to stay comfortable",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Housemate Moves Out",
+    "description": "Your housemate leaves and you need to cover rent or find someone new.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Find a new housemate quickly",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Cover full rent from savings temporarily",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      },
+      {
+        "label": "Downsize to a smaller place",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": -1,
+        "time": -2
+      }
+    ]
+  },
+
+  {
+    "title": "Subscription Price Hike",
+    "description": "Several of your streaming services raise their prices at once.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Cancel all of them",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      },
+      {
+        "label": "Keep one, cancel the rest",
+        "savings_delta": 75,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Accept the increases and continue",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Wedding Invitation",
+    "description": "A close friend invites you to their wedding abroad.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Attend — flights, gift, and all",
+        "savings_delta": -400,
+        "ef_delta": 0,
+        "wants_delta": -300,
+        "wellbeing": 3,
+        "time": -1
+      },
+      {
+        "label": "Send a gift and attend virtually",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Decline due to budget constraints",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Office Farewell Collection",
+    "description": "A beloved colleague is leaving and a collection is being organised.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Contribute generously",
+        "savings_delta": -75,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Give a modest amount",
+        "savings_delta": -25,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Skip the collection",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "New Phone Plan",
+    "description": "Your mobile contract is up for renewal and there are better deals available.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Switch to a cheaper SIM-only plan",
+        "savings_delta": 150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Upgrade to a better data plan",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Keep your current plan unchanged",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Fitness Challenge at Work",
+    "description": "Your company launches a wellness challenge with a prize for participants.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Join fully and compete",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Participate casually",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": 0
+      },
+      {
+        "label": "Skip it",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 1
+      }
+    ]
+  },
+
+  {
+    "title": "House Viewing",
+    "description": "You consider moving to a nicer flat — higher rent but better quality of life.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Move to the nicer flat",
+        "savings_delta": -250,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Stay put and save",
+        "savings_delta": 200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      },
+      {
+        "label": "Look for a middle-ground option",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Impulse Booking",
+    "description": "You spot a flash sale for a hotel stay and feel tempted to book impulsively.",
+    "type": "neutral",
+    "options": [
+      {
+        "label": "Book it immediately",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": -100,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Sleep on it and decide tomorrow",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Ignore it and stick to your budget",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Traffic Fine",
+    "description": "You receive an unexpected speeding fine in the mail.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Pay it immediately",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      },
+      {
+        "label": "Appeal the fine formally",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -2
+      },
+      {
+        "label": "Pay late and incur extra charges",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Lost Wallet",
+    "description": "You lose your wallet including some cash and need to replace your cards.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Report and replace everything promptly",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Use emergency fund to cover losses",
+        "savings_delta": 0,
+        "ef_delta": -100,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Delay replacing cards and manage with cash",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": -50,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Broken Glasses",
+    "description": "Your glasses break and you need a new pair urgently.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Get a quality replacement immediately",
+        "savings_delta": -250,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Use emergency fund for replacement",
+        "savings_delta": 0,
+        "ef_delta": -250,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Get the cheapest pair available",
+        "savings_delta": -80,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Missed a Bill Payment",
+    "description": "You forgot to pay a bill and now face a late fee and a dip in your credit rating.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Pay immediately and set up auto-pay",
+        "savings_delta": -120,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Pay but skip auto-pay setup",
+        "savings_delta": -150,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      },
+      {
+        "label": "Ignore for another month",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Home Security Issue",
+    "description": "Your home alarm system malfunctions and needs repair or replacement.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Repair it promptly",
+        "savings_delta": -180,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Use emergency fund for full replacement",
+        "savings_delta": 0,
+        "ef_delta": -300,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": 0
+      },
+      {
+        "label": "Leave it and hope for the best",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Overcharged by Contractor",
+    "description": "A tradesperson charges more than the agreed quote for work done.",
+    "type": "negative_type_1",
+    "options": [
+      {
+        "label": "Dispute and negotiate",
+        "savings_delta": -100,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Pay in full to avoid conflict",
+        "savings_delta": -300,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": 0
+      },
+      {
+        "label": "Escalate formally with a complaint",
+        "savings_delta": -50,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -2
+      }
+    ]
+  },
+
+  {
+    "title": "Parent Needs Medical Help",
+    "description": "One of your parents requires an urgent medical procedure and needs financial support.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Cover full costs (EF + savings)",
+        "savings_delta": -400,
+        "ef_delta": -600,
+        "wants_delta": 0,
+        "wellbeing": 2,
+        "time": -1
+      },
+      {
+        "label": "Contribute partially and seek other support",
+        "savings_delta": -200,
+        "ef_delta": -300,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Rely on public healthcare options",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Scam / Fraud Loss",
+    "description": "You fall victim to an online scam and lose a significant amount of money.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Report it and pursue a refund",
+        "savings_delta": -200,
+        "ef_delta": -300,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -2
+      },
+      {
+        "label": "Absorb the loss and move on",
+        "savings_delta": -500,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": 0
+      },
+      {
+        "label": "Use emergency fund and file a formal claim",
+        "savings_delta": 0,
+        "ef_delta": -500,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      }
+    ]
+  },
+
+  {
+    "title": "Mental Health Burnout",
+    "description": "You experience a serious period of burnout and your doctor recommends time off.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Take paid leave and seek therapy",
+        "savings_delta": -300,
+        "ef_delta": -200,
+        "wants_delta": 0,
+        "wellbeing": 3,
+        "time": 1
+      },
+      {
+        "label": "Continue working but start therapy",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Push through without support",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -3,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Major Home Appliance Failure",
+    "description": "Your fridge and oven both break down in the same week.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Replace both using EF",
+        "savings_delta": 0,
+        "ef_delta": -700,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Replace one now, one later (savings)",
+        "savings_delta": -300,
+        "ef_delta": -300,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -1
+      },
+      {
+        "label": "Buy second-hand replacements",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Severe Weather Damage",
+    "description": "A severe storm damages your car and part of your home exterior.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Claim on insurance (EF for excess)",
+        "savings_delta": 0,
+        "ef_delta": -400,
+        "wants_delta": 0,
+        "wellbeing": 1,
+        "time": -1
+      },
+      {
+        "label": "Pay out of pocket for repairs",
+        "savings_delta": -600,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      },
+      {
+        "label": "Repair only the most critical damage",
+        "savings_delta": -200,
+        "ef_delta": -200,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Home Burglary",
+    "description": "Your home is broken into and several valuables are stolen.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Claim insurance and upgrade security",
+        "savings_delta": -100,
+        "ef_delta": -400,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Replace essentials from savings",
+        "savings_delta": -500,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -1,
+        "time": -1
+      },
+      {
+        "label": "File a report but delay replacing items",
+        "savings_delta": 0,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": -2,
+        "time": -1
+      }
+    ]
+  },
+
+  {
+    "title": "Redundancy Package",
+    "description": "You are made redundant but receive a statutory redundancy payout.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Save the full payout while job hunting",
+        "savings_delta": 500,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": -2
+      },
+      {
+        "label": "Use payout to upskill and job hunt",
+        "savings_delta": 100,
+        "ef_delta": 0,
+        "wants_delta": -400,
+        "wellbeing": 1,
+        "time": -2
+      },
+      {
+        "label": "Spend freely while looking for work",
+        "savings_delta": -200,
+        "ef_delta": 0,
+        "wants_delta": -300,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
+  },
+
+  {
+    "title": "Unexpected Tax Bill",
+    "description": "You underpaid tax last year and now owe a lump sum.",
+    "type": "negative_type_2",
+    "options": [
+      {
+        "label": "Pay immediately from savings",
+        "savings_delta": -600,
+        "ef_delta": 0,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      },
+      {
+        "label": "Set up a payment plan",
+        "savings_delta": -200,
+        "ef_delta": -200,
+        "wants_delta": -100,
+        "wellbeing": -1,
+        "time": -1
+      },
+      {
+        "label": "Use emergency fund to clear it",
+        "savings_delta": 0,
+        "ef_delta": -600,
+        "wants_delta": 0,
+        "wellbeing": 0,
+        "time": 0
+      }
+    ]
   }
 ]

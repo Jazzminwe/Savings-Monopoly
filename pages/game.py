@@ -18,35 +18,38 @@ def emoji_bar(value, emoji, max_value=10):
     return emoji * v + "▫️" * (max_value - v) + f" ({v}/{max_value})"
 
 def draw_weighted_card(cards, round_number, total_rounds):
-    used = set(st.session_state.get("used_card_titles", []))
+    # FIX 1: Robust no-repeat logic — always read directly from session state
+    if "used_card_titles" not in st.session_state:
+        st.session_state.used_card_titles = []
+
+    used = set(st.session_state.used_card_titles)
     available = [c for c in cards if c["title"] not in used]
 
+    # If all cards exhausted, reset the deck
     if not available:
-        # All cards exhausted — reset and start fresh
         st.session_state.used_card_titles = []
-        available = cards
+        available = list(cards)
 
+    # FIX 2: Slightly heavier negative weights
     progress = round_number / max(1, total_rounds)
 
     if progress < 0.3:
-        weights = {"positive": 0.40, "neutral": 0.30, "negative_type_1": 0.20, "negative_type_2": 0.10}
+        weights = {"positive": 0.35, "neutral": 0.30, "negative_type_1": 0.25, "negative_type_2": 0.10}
     else:
-        weights = {"positive": 0.30, "neutral": 0.20, "negative_type_1": 0.30, "negative_type_2": 0.20}
+        weights = {"positive": 0.20, "neutral": 0.20, "negative_type_1": 0.35, "negative_type_2": 0.25}
 
-    # Filter to types that still have available cards
+    # Filter to types with available unused cards
     pool = [c for c in available if c["type"] in weights and weights[c["type"]] > 0]
 
-    # Fallback: if weighted pool is empty (a type ran out), use all remaining available cards
+    # Fallback: if a type has run out and pool is empty, use all remaining cards
     if not pool:
         pool = available
 
     card_weights = [weights.get(c["type"], 0.1) for c in pool]
     chosen = random.choices(pool, weights=card_weights, k=1)[0]
 
-    # Mark as used
-    used_titles = st.session_state.get("used_card_titles", [])
-    used_titles.append(chosen["title"])
-    st.session_state.used_card_titles = used_titles
+    # Mark as used — append directly to session state list
+    st.session_state.used_card_titles.append(chosen["title"])
 
     return chosen
 
@@ -79,11 +82,12 @@ p.setdefault("ef_balance", 0)
 p.setdefault("wants_balance", 0)
 p.setdefault("allocation", {"savings": 0, "ef": 0, "wants": 0})
 
-# Initialise used card tracker if not present
-st.session_state.setdefault("used_card_titles", [])
+# Initialise used card tracker
+if "used_card_titles" not in st.session_state:
+    st.session_state.used_card_titles = []
 
 # -------------------------------------------------
-# Style (fixed header layout)
+# Style
 # -------------------------------------------------
 st.markdown(
     """
@@ -92,7 +96,6 @@ div.block-container {
   max-width: 1280px;
   padding-top: 3rem;
 }
-
 .header-row {
   display: flex;
   justify-content: space-between;
@@ -118,15 +121,11 @@ div.block-container {
   display: block;
   margin-top: 0.4rem;
 }
-
 h4 { font-size: 1rem !important; font-weight: 700 !important; }
 .section-title { font-size: 1.1rem; font-weight: 750; margin-top: 1rem; }
-
 div[data-testid="column"] { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
-
 div[data-testid="stNumberInput"] > div { width: 100% !important; }
 div[data-testid="stNumberInput"] input { width: 100% !important; font-size: 0.9rem; }
-
 .stProgress > div > div { height: 6px !important; border-radius: 3px !important; }
 </style>
 """,
@@ -230,11 +229,14 @@ def simulate_choice_and_validate(p, selected):
     if new_time < 0:
         return False, "Not enough time/energy to take this action.", None
 
+    # FIX 4: Clamp wellbeing and time at 10 — never block a decision for exceeding max.
+    # Only the lower bound (0) is a hard stop.
     new_emotion = p["emotion"] + wellbeing_delta
-    if new_emotion < 0 or new_emotion > 10:
-        return False, "This decision would push well-being out of range (0–10).", None
+    if new_emotion < 0:
+        return False, "This decision would push your wellbeing too low.", None
+    new_emotion = min(10, new_emotion)   # silently cap at 10, no error
 
-    new_emotion = max(0, min(10, new_emotion))
+    new_time = min(10, new_time)         # silently cap time at 10 too
 
     new_state = {
         "savings": new_savings,
@@ -287,9 +289,13 @@ with left:
     draw_disabled = bool(p.get("current_card") or p["rounds_played"] >= tr)
     draw = st.button("🎴 Draw Life Card", type="primary", disabled=draw_disabled)
 
+    # FIX 3: Load both card files and merge into one deck
     if "life_cards" not in st.session_state:
         with open("data/life_cards.json", "r") as f:
-            st.session_state.life_cards = json.load(f)
+            base_cards = json.load(f)
+        with open("data/life_cards_additional.json", "r") as f:
+            extra_cards = json.load(f)
+        st.session_state.life_cards = base_cards + extra_cards
 
     if draw and not draw_disabled:
         p["current_card"] = draw_weighted_card(st.session_state.life_cards, p["rounds_played"], tr)
