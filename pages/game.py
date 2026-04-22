@@ -18,6 +18,14 @@ def emoji_bar(value, emoji, max_value=10):
     return emoji * v + "▫️" * (max_value - v) + f" ({v}/{max_value})"
 
 def draw_weighted_card(cards, round_number, total_rounds):
+    used = set(st.session_state.get("used_card_titles", []))
+    available = [c for c in cards if c["title"] not in used]
+
+    if not available:
+        # All cards exhausted — reset and start fresh
+        st.session_state.used_card_titles = []
+        available = cards
+
     progress = round_number / max(1, total_rounds)
 
     if progress < 0.3:
@@ -25,9 +33,22 @@ def draw_weighted_card(cards, round_number, total_rounds):
     else:
         weights = {"positive": 0.30, "neutral": 0.20, "negative_type_1": 0.30, "negative_type_2": 0.20}
 
-    pool = [c for c in cards if c["type"] in weights and weights[c["type"]] > 0]
-    card_weights = [weights[c["type"]] for c in pool]
-    return random.choices(pool, weights=card_weights, k=1)[0]
+    # Filter to types that still have available cards
+    pool = [c for c in available if c["type"] in weights and weights[c["type"]] > 0]
+
+    # Fallback: if weighted pool is empty (a type ran out), use all remaining available cards
+    if not pool:
+        pool = available
+
+    card_weights = [weights.get(c["type"], 0.1) for c in pool]
+    chosen = random.choices(pool, weights=card_weights, k=1)[0]
+
+    # Mark as used
+    used_titles = st.session_state.get("used_card_titles", [])
+    used_titles.append(chosen["title"])
+    st.session_state.used_card_titles = used_titles
+
+    return chosen
 
 
 # -------------------------------------------------
@@ -57,6 +78,9 @@ p.setdefault("ef_cap", 3000)
 p.setdefault("ef_balance", 0)
 p.setdefault("wants_balance", 0)
 p.setdefault("allocation", {"savings": 0, "ef": 0, "wants": 0})
+
+# Initialise used card tracker if not present
+st.session_state.setdefault("used_card_titles", [])
 
 # -------------------------------------------------
 # Style (fixed header layout)
