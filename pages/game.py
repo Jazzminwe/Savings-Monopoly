@@ -76,6 +76,20 @@ p.setdefault("allocation", {"savings": 0, "ef": 0, "wants": 0})
 if "used_card_titles" not in st.session_state:
     st.session_state.used_card_titles = []
 
+# FIX 1: Initialise allocation keys in st.session_state so number_input
+# widgets own their own state and don't write back to p on every render.
+if "alloc_sav" not in st.session_state:
+    st.session_state["alloc_sav"] = int(p["allocation"]["savings"])
+if "alloc_ef" not in st.session_state:
+    st.session_state["alloc_ef"] = int(p["allocation"]["ef"])
+if "alloc_w" not in st.session_state:
+    st.session_state["alloc_w"] = int(p["allocation"]["wants"])
+
+# FIX 2: Load cards once, correctly (was loading same file twice)
+if "life_cards" not in st.session_state:
+    with open("data/life_cards.json", "r") as f:
+        st.session_state.life_cards = json.load(f)
+
 # -------------------------------------------------
 # Style
 # -------------------------------------------------
@@ -163,37 +177,47 @@ with st.container(border=True):
         pct = p["savings"] / goal if goal else 0
         st.progress(min(1.0, pct))
         st.markdown(f"**{fmt(p['savings'])} / {fmt(goal)}** ({int(pct * 100)}%)")
-        p["allocation"]["savings"] = st.number_input(
+        # FIX 1: widgets manage their own state via key — no assignment back to p here
+        st.number_input(
             "Monthly allocation (Savings):",
-            0, remaining, int(p["allocation"]["savings"]), 50, key="alloc_sav",
+            min_value=0, max_value=remaining,
+            step=50, key="alloc_sav",
         )
 
     with c3:
         st.markdown("#### 🛟 Emergency Fund")
         st.markdown(f"**Balance:** {fmt(p['ef_balance'])}")
         st.caption(f"Cap: {fmt(p['ef_cap'])}")
-        p["allocation"]["ef"] = st.number_input(
+        st.number_input(
             "Monthly allocation (EF):",
-            0, remaining, int(p["allocation"]["ef"]), 50, key="alloc_ef",
+            min_value=0, max_value=remaining,
+            step=50, key="alloc_ef",
         )
 
     with c4:
         st.markdown("#### 🎉 Wants Fund")
         st.markdown(f"**Balance:** {fmt(p['wants_balance'])}")
         st.caption("Cap: None")
-        p["allocation"]["wants"] = st.number_input(
+        st.number_input(
             "Monthly allocation (Wants):",
-            0, remaining, int(p["allocation"]["wants"]), 50, key="alloc_w",
+            min_value=0, max_value=remaining,
+            step=50, key="alloc_w",
         )
+
+# Read current allocation values from session state (owned by widgets)
+alloc_sav = st.session_state["alloc_sav"]
+alloc_ef  = st.session_state["alloc_ef"]
+alloc_w   = st.session_state["alloc_w"]
+
+# Sync back to p["allocation"] so game logic can read them
+p["allocation"]["savings"] = alloc_sav
+p["allocation"]["ef"]      = alloc_ef
+p["allocation"]["wants"]   = alloc_w
 
 # -------------------------------------------------
 # Allocation validation — runs every render cycle
 # -------------------------------------------------
-alloc_sum = (
-    p["allocation"]["savings"]
-    + p["allocation"]["ef"]
-    + p["allocation"]["wants"]
-)
+alloc_sum = alloc_sav + alloc_ef + alloc_w
 alloc_valid = alloc_sum == remaining
 
 if not alloc_valid:
@@ -210,23 +234,19 @@ if not alloc_valid:
 # Game Logic
 # -------------------------------------------------
 def simulate_choice_and_validate(p, selected):
-    s_delta = selected.get("savings_delta", 0)
-    ef_delta = selected.get("ef_delta", 0)
-    w_delta = selected.get("wants_delta", 0)
+    s_delta        = selected.get("savings_delta", 0)
+    ef_delta       = selected.get("ef_delta", 0)
+    w_delta        = selected.get("wants_delta", 0)
     wellbeing_delta = selected.get("wellbeing", 0)
-    time_cost = selected.get("time", 0)
+    time_cost      = selected.get("time", 0)
 
-    alloc_sav = p["allocation"].get("savings", 0)
-    alloc_ef = p["allocation"].get("ef", 0)
-    alloc_w = p["allocation"].get("wants", 0)
-
-    savings_after_alloc = p["savings"] + alloc_sav
-    ef_after_alloc = min(p["ef_cap"], p["ef_balance"] + alloc_ef)
-    wants_after_alloc = p["wants_balance"] + alloc_w
+    savings_after_alloc = p["savings"] + p["allocation"].get("savings", 0)
+    ef_after_alloc      = min(p["ef_cap"], p["ef_balance"] + p["allocation"].get("ef", 0))
+    wants_after_alloc   = p["wants_balance"] + p["allocation"].get("wants", 0)
 
     new_savings = savings_after_alloc + s_delta
-    new_ef = ef_after_alloc + ef_delta
-    new_wants = wants_after_alloc + w_delta
+    new_ef      = ef_after_alloc + ef_delta
+    new_wants   = wants_after_alloc + w_delta
 
     if new_savings < 0:
         return False, "Not enough in your savings pot to cover this decision.", None
@@ -242,17 +262,17 @@ def simulate_choice_and_validate(p, selected):
     new_emotion = p["emotion"] + wellbeing_delta
     if new_emotion < 0:
         return False, "This decision would push your wellbeing too low.", None
-    new_emotion = min(10, new_emotion)
-    new_time = min(10, new_time)
 
-    new_state = {
-        "savings": new_savings,
-        "ef_balance": new_ef,
+    new_emotion = min(10, new_emotion)
+    new_time    = min(10, new_time)
+
+    return True, "", {
+        "savings":      new_savings,
+        "ef_balance":   new_ef,
         "wants_balance": new_wants,
-        "time": new_time,
-        "emotion": new_emotion,
+        "time":         new_time,
+        "emotion":      new_emotion,
     }
-    return True, "", new_state
 
 
 def end_popup(msg, success=False):
@@ -293,7 +313,6 @@ with left:
                 success=False,
             )
 
-    # Draw button disabled if allocation is invalid OR a card is already active
     draw_disabled = bool(p.get("current_card") or p["rounds_played"] >= tr or not alloc_valid)
     draw = st.button(
         "🎴 Draw Life Card",
@@ -301,13 +320,6 @@ with left:
         disabled=draw_disabled,
         help="Fix your budget allocation above before drawing." if not alloc_valid else None,
     )
-
-    if "life_cards" not in st.session_state:
-        with open("data/life_cards.json", "r") as f:
-            base_cards = json.load(f)
-        with open("data/life_cards.json", "r") as f:
-            extra_cards = json.load(f)
-        st.session_state.life_cards = base_cards + extra_cards
 
     if draw and not draw_disabled:
         p["current_card"] = draw_weighted_card(st.session_state.life_cards, p["rounds_played"], tr)
@@ -323,7 +335,6 @@ with left:
             st.write(card["description"])
 
         options = card.get("options", [])
-
         display_opts = [
             f"{opt['label']} → Savings: {opt.get('savings_delta',0)}, "
             f"EF: {opt.get('ef_delta',0)}, Wants: {opt.get('wants_delta',0)}, "
@@ -333,7 +344,6 @@ with left:
 
         choice = st.radio("Choose an option:", display_opts, key="decision_choice")
 
-        # Save button also blocked if allocation is invalid
         save_disabled = not alloc_valid
         if st.button(
             "💾 Save Decision",
@@ -342,29 +352,27 @@ with left:
             help="Fix your budget allocation above before saving." if save_disabled else None,
         ):
             selected = options[display_opts.index(choice)]
-
             ok, msg, new_state = simulate_choice_and_validate(p, selected)
 
             if not ok:
                 st.warning(f"❗ {msg} Please choose a different option.")
                 st.stop()
             else:
-                p["savings"] = new_state["savings"]
-                p["ef_balance"] = new_state["ef_balance"]
+                p["savings"]       = new_state["savings"]
+                p["ef_balance"]    = new_state["ef_balance"]
                 p["wants_balance"] = new_state["wants_balance"]
-                p["time"] = new_state["time"]
-                p["emotion"] = new_state["emotion"]
+                p["time"]          = new_state["time"]
+                p["emotion"]       = new_state["emotion"]
 
                 p["rounds_played"] += 1
                 p["decision_log"].append(f"{card['title']} — {choice}")
-                p["choice_made"] = True
-                p["current_card"] = None
+                p["choice_made"]   = True
+                p["current_card"]  = None
 
                 st.session_state.player = p
                 st.success("✅ Decision saved! Next round starting...")
                 time.sleep(0.4)
                 st.rerun()
-
 
 with right:
     st.markdown('<div class="section-title">❤️⚡ Wellbeing / Time</div>', unsafe_allow_html=True)
