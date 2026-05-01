@@ -15,9 +15,9 @@ st.title("💰 Savings Monopoly — Setup")
 # ----------------------------------------
 if "facilitator_settings" not in st.session_state:
     st.session_state.facilitator_settings = {
-        "goal": 5000,
+        "goal": 8000,
         "income": 2000,
-        "rounds": 10,
+        "rounds": 12,
         "fixed_costs": 1000,
         "ef_cap": 3000,
     }
